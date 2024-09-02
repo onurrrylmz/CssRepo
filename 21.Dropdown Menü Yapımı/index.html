@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        ul {
+            list-style-type: none;
+            width: 100%;
+            background-color: #3f3f3f;
+        }
+
+        ul li {
+            display: inline-block;
+            /* İnline blok yaparak yatay yaptık ve büyüklüklerini ayarlayabildik*/
+            width: 100px;
+            padding: 10px;
+            /*classların arasındaki mesafeyi belirler*/
+            margin-right: 20px;
+            margin-left: -30px;
+        }
+
+        ul li:hover {
+            background-color: red;
+            transition: 0.5s;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        ul li:hover {
+            background-color: red;
+            transition: 0.5s;
+        }
+
+        i {
+            padding-right: 10px;
+        }
+
+        #newcontent {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            margin-top: 10.3px;
+            margin-left: -10px;
+            width: 100px;
+        }
+
+        .news-li:hover #newcontent {
+            display: block;
+        }
+
+        #new2content{
+            position: absolute;
+            z-index: 1;
+            display: none;
+            margin-left: 115px;
+            margin-top: -33px;
+            width: 100px;
+
+        }
+
+        .new2-li:hover #new2content{
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        
+        <li class="news-li">
+
+            <a href="#"><i class="fas fa-newspaper"></i> News</a>
+
+            <div id="newcontent">
+                <ul>
+                    <li style="display: block;"><a href="#">New 1</a></li>
+                    <li class="new2-li" style="display: block;"><a href="#">New 2</a>
+
+                        <div id="new2content">
+
+                            <ul>
+
+                                <li><a href="#">Detail 1</a></li>
+                                <li><a href="#">Detail 2</a></li>
+                                <li><a href="#">Detail 3</a></li>
+                                <li><a href="#">Detail 4</a></li>
+
+                            </ul>
+
+                        </div>
+                    
+                    </li>
+
+                    <li style="display: block;"><a href="#">New 3</a></li>
+                    <li style="display: block;"><a href="#">New 4</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        
+        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+    </ul>
+
+</body>
+
+</html>
